@@ -8,6 +8,10 @@ use DBI;
 use Data::Dumper;
 
 my ($arg) = $ARGV[0];
+my $base = 'web_sms'; #you database
+my $user = 'web_sms'; #sql user
+my $password = 'Aa123456'; #sql password
+
 my $dbh = DBI->connect('DBI:mysql:web_sms', 'web_sms', 'Aa123456') || die "Could not connect to database: ", $DBI::errstr;
 
 if(defined $arg and $arg eq "-local")
